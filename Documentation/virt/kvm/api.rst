@@ -8218,6 +8218,17 @@ Used to configure and set up the memory for a Realm. The available actions are:
                                   enter the realm until it has been activated.
 ================================= =============================================
 
+7.43 KVM_CAP_RISCV_MP_STATE_RESET
+---------------------------------
+
+:Architectures: riscv
+:Type: VM
+:Parameters: None
+:Returns: 0 on success, -EINVAL if arg[0] is not zero
+
+When this capability is enabled, KVM resets the VCPU when setting
+MP_STATE_INIT_RECEIVED through IOCTL.  The original MP_STATE is preserved.
+
 8. Other capabilities.
 ======================
 
